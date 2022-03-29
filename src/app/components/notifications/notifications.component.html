@@ -1,0 +1,13 @@
+<ng-template #template>
+    <div
+        *ngFor="let notification of notificationService.notifications"
+        class="{{ cssClass(notification) }}"
+    >
+        <a
+            class="check-notification"
+            (click)="removeNotification(notification)"
+            ><mat-icon>visibility</mat-icon></a
+        >
+        <span>{{ notification.message }}</span>
+    </div>
+</ng-template>

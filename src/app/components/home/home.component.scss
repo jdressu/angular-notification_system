@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance-space {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.green-button {
+    background-color: #28a745;
+}
+
+.blue-button {
+    background-color: #17a2b8;
+}
+
+.yellow-button {
+    color: black;
+    background-color: #e0a800;
+}
+
+.add-top-margin {
+    margin-top: 10px;
+}

@@ -1,0 +1,26 @@
+<app-notifications></app-notifications>
+<div class="column full-height">
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="extend-to-end"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="">Home</button>
+    <button mat-menu-item routerLink="/somewhere-else">Somewhere Else</button>
+  </mat-menu>
+
+  <div class="column center">
+    <router-outlet></router-outlet>
+  </div>
+</div>

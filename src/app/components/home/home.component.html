@@ -1,0 +1,22 @@
+<div class="center add-top-margin">
+    <p>Another take on <a href="https://jasonwatmore.com" target="_top">Jason Watmore's</a>&nbsp;<a href="https://jasonwatmore.com/post/2019/07/05/angular-8-alert-toaster-notifications" target="_top">Angular 8 - Alert (Toaster) Notifications</a>.</p>
+</div>
+
+<div class="column add-top-margin">
+    <div class="balance-space center">
+        <button mat-raised-button class="green-button" (click)="notificationService.success('Success!!', options)">Success</button>
+        <button mat-raised-button color="warn" (click)="notificationService.error('Error :(', options)">Error</button>
+        <button mat-raised-button class="blue-button" (click)="notificationService.info('Some info....', options)">Info</button>
+        <button mat-raised-button class="yellow-button" (click)="notificationService.warn('Warning: ...', options)">Warn</button>
+        <button mat-raised-button (click)="notificationService.clear()">Clear</button>
+    </div>
+    <div class="column add-top-margin">
+        <mat-checkbox [(ngModel)]="options.autoClose">Auto close alert after three seconds</mat-checkbox>
+        <mat-checkbox [(ngModel)]="options.keepAfterRouteChange">Keep displaying after one route change</mat-checkbox>
+    </div>
+    <div class="add-top-margin">
+        <mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>(debugMode) notifications object</mat-panel-title></mat-expansion-panel-header><pre>
+{{ notificationService.notifications | json }}
+        </pre></mat-expansion-panel>
+    </div>
+</div>
